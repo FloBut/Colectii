@@ -1,8 +1,8 @@
-package org.example;
+package No1_Phone_Book;
 
 import java.util.ArrayList;
 
-import static org.example.PhoneBook.filterContacts;
+import static No1_Phone_Book.PhoneBook.filterContacts;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
