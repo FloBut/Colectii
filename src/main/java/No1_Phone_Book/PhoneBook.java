@@ -33,7 +33,8 @@ public class PhoneBook {
 
     public static ArrayList<String> filterContacts(ArrayList<String> validContacts, ArrayList<String> blackContactList) {
         //parcurg lista de contacte blocate o compar cu list de contacte valide daca un numar din cele blocate este
-        // in lista de contacte valide atunci il sterg
+        // in lista de contacte valide atunci ma folosesc de o alta lista in care pun contactele care nu sunt blocate
+        //si returnez lista 
         ArrayList<String> newValidContactList = new ArrayList<>();
         for (String validContact: validContacts) {
             int flag = 0;
