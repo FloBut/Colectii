@@ -23,31 +23,27 @@ package No1_Phone_Book;
 //Adaugă numărul primit ca parametru în lista de numere și îl șterge din lista de numere blocate
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class PhoneBook {
-    ArrayList<String> validContactsList = new ArrayList<>();//numere de telefon valide
-    ArrayList<String> blackContactsList = new ArrayList<>();//numere de telefon blocate
+    List<String> validContactsList;//numere de telefon valide
+    List<String> blackContactsList; //numere de telefon blocate
 
 
-
-    public static ArrayList<String> filterContacts(ArrayList<String> validContacts, ArrayList<String> blackContactList) {
+    public static List<String> filterContacts(List<String> validContacts, List<String> blackContactList) {
         //parcurg lista de contacte blocate o compar cu list de contacte valide daca un numar din cele blocate este
         // in lista de contacte valide atunci ma folosesc de o alta lista in care pun contactele care nu sunt blocate
-        //si returnez lista 
-        ArrayList<String> newValidContactList = new ArrayList<>();
-        for (String validContact: validContacts) {
-            int flag = 0;
-            for (String invalidContact: blackContactList) {
-                if (validContact.equals(invalidContact)) {
-                   flag = 1;
-                }
-            }
-            if (flag == 0) {
-                newValidContactList.add(validContact);
-            }
-        }
-        return newValidContactList ;
+        //si returnez lista
+
+        //pentru a sterge un element din lista cu "contains" atunci parcurg cealalta lista astfel incat lista
+        // din care sterg sa nu fie cea parcursa
+       for (String contact: blackContactList) {
+           if (validContacts.contains(contact)) {
+               validContacts.remove(contact);
+           }
+       }
+       return validContacts;
     }
 
 }

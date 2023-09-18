@@ -1,5 +1,5 @@
 package No2_SpellChecker;
-
+//de refacut conform indicatii video
 import java.util.ArrayList;
 import java.util.HashSet;
 
