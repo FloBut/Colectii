@@ -39,10 +39,10 @@ public class SpellChecker {
     // ma folesec de un hashset
     public static HashSet<String> compareWords(ArrayList<String> wordListUpLowerCase, ArrayList<String> findList) {
         HashSet<String> unknownWordsList = new HashSet<>();//declar un hashlist in care voi pune o singura data cuvintele
-        for (String s: wordListUpLowerCase ) {
-            if ()
-                unknownWordsList.add(w);
-
+        for (String s: findList ) {
+            if (!(findList.contains(wordListUpLowerCase))) {
+                unknownWordsList.add(s);
+            }
         }
         return unknownWordsList;
     }
